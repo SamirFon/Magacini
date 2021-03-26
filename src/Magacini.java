@@ -1,12 +1,18 @@
+import java.util.LinkedList;
+
 import artikal.Artikli;
 import interfejs.MagacinInterfejs;
 
 public class Magacini  implements MagacinInterfejs{
+	
+	LinkedList<Artikli> artikli = new LinkedList<Artikli>();
 
 	@Override
 	public void dodavanjeArtikla(Artikli a) {
-		// TODO Auto-generated method stub
 		
+		if (!artikli.contains(a))
+		
+		artikli.add(a);
 	}
 
 	@Override
