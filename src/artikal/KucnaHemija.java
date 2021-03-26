@@ -18,6 +18,8 @@ public class KucnaHemija extends Artikli {
 	}
 
 	public void setRokTrajanja(GregorianCalendar rokTrajanja) {
+		if (rokTrajanja.after(new GregorianCalendar()))
+			throw new RuntimeException("Rok trajanja ne sme biti posle danasnjeg dana");
 		this.rokTrajanja = rokTrajanja;
 	}
 
